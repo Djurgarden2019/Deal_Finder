@@ -166,9 +166,9 @@ with col2:
 
 col_min, col_max = st.columns(2)
 with col_min:
-    min_price = st.slider("Minsta pris (kr)", 0, 5000, 0, step=50) or None
+    min_price = st.slider("Minsta pris (kr)", 0, 100000, 0, step=500) or None
 with col_max:
-    max_price = st.slider("Maxpris (kr)", 0, 15000, 3000, step=100) or None
+    max_price = st.slider("Maxpris (kr)", 0, 200000, 5000, step=1000) or None
 
 sources = st.multiselect("Källor", ["Blocket", "Tradera", "eBay"], default=["Blocket", "Tradera"])
 sort_mode = st.radio("Sortera efter", ["Deal-score", "Maximal uppsida"], horizontal=True)
